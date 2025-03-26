@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+mat-card{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px; 
+    min-height: 450px; // Setează o înălțime minimă mai mare
+    border-radius: 16px; // Rotunjirea colțurilor
+
+    @media screen and (max-width: 500px){
+        max-width: 90%;
+        border-radius: 12px; // Ușor mai mic pentru ecrane mici
+    }
+}
+
+mat-card-title{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 30px; // Adaugă spațiu deasupra titlului
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-form-field{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 100%;
+    
+    
+}
+button[type="submit"] {
+    background-color: #29104A !important; // Setează culoarea principală
+    color: white !important; // Text alb pentru contrast
+    border-radius: 8px; // Rotunjire colțuri
+    font-weight: bold;
+    height: 50px; // Mărește înălțimea butonului
+    font-size: 16px; // Opțional, pentru un text mai vizibil
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #1f0838 !important; // Nuanță mai închisă la hover
+    }
+}
+
+button[routerLink="/register"] {
+    color: #29104A !important; // Setează culoarea textului
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+
+    &:hover {
+        color: #1f0838 !important; // Culoare mai închisă la hover
+    }
+}
+
+@media  screen and (max-width: 500px) {
+    mat-card-title{
+        font-size: 20px;
+    }
+
+    mat-form-field{
+        margin-bottom: 10px;
+    }
+    
+}
+.error-snackbar{
+    background-color: #f44336 !important;
+}

@@ -1,0 +1,70 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #29104A;
+    color: #fff;
+}
+
+.navbar-brand{
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+.spacer{
+    flex: 1;
+}
+
+button{
+    color: #fff !important;
+    text-transform: uppercase;
+    margin-left: 8px;
+    font-size: 15px;
+
+}
+
+button.active{
+    font-weight: 600;
+}
+
+.custom-toolbar{
+    background-color: #ff0000;
+}
+
+/*--------------------------------------------------------------------------------------------- */
+
+.home-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Poziționează mesajul mai sus */
+    align-items: center;
+    height: 60vh; /* Încă ocupă o parte din înălțimea paginii */
+    text-align: center;
+    padding-top: 15%; /* Adaugă un mic spațiu de la partea de sus a paginii */
+  }
+  
+  .welcome-title {
+    font-size: 48px; /* Mărire a fontului pentru „Welcome to Task Tracker” */
+    color: #29104A; /* Culoarea pe care o ai la meniu */
+    font-weight: bold;
+    animation: fadeIn 2s ease-out, scaleUp 2s ease-out 0.5s;
+  }
+  
+  .animated-title {
+    font-size: 34px; /* Font mai mic pentru „Stay on top of your tasks...” */
+    color: #29104A; /* Culoarea pe care o ai la meniu */
+    animation: fadeIn 2s ease-out, scaleUp 2s ease-out 0.5s;
+  }
+  
+  
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.0); /* Începe mai mic */
+    }
+    100% {
+      transform: scale(1); /* Mărește la dimensiunea normală */
+    }
+  }
+  

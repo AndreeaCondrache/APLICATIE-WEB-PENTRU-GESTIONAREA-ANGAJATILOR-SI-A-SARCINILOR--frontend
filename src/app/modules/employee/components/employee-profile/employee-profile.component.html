@@ -1,0 +1,22 @@
+<mat-card class="profile-card">
+  <mat-card-header>
+    <div mat-card-avatar class="profile-avatar">
+      <mat-icon>account_circle</mat-icon>
+    </div>
+    <mat-card-title>Profilul angajatului</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p><strong>Nume:</strong> {{ user?.name }}</p>
+    <p><strong>ID:</strong> {{ user?.id }}</p>
+    <p><strong>Rol:</strong> {{ user?.role }}</p>
+
+    <mat-divider></mat-divider>
+    <h3>Statistici taskuri</h3>
+    <ul>
+      <li><strong>Total:</strong> {{ taskStats.total }}</li>
+      <li><strong>Completate:</strong> {{ taskStats.completed }}</li>
+      <li><strong>În progres:</strong> {{ taskStats.inProgress }}</li>
+    </ul>
+  </mat-card-content>
+</mat-card>

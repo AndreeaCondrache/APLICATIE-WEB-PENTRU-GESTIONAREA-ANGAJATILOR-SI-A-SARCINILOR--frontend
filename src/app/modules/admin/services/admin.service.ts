@@ -84,6 +84,37 @@ private createAuthorizationHeader(): HttpHeaders {
   );
 }
 
+addEmployee(data: any) {
+  return this.http.post('http://localhost:8080/api/admin/employee', data);
+}
+
+
+ deleteUser(id: number): Observable<any> {
+  return this.http.delete(BASE_URL + `api/admin/user/${id}`, {
+    headers: this.createAuthorizationHeader()
+  });
+}
+
+filterUsers(params: any): Observable<any> {
+  let httpParams = new HttpParams();
+  Object.keys(params).forEach(key => {
+    if (params[key]) {
+      httpParams = httpParams.set(key, params[key]);
+    }
+  });
+
+  return this.http.get(BASE_URL + 'api/admin/users/filter', {
+    headers: this.createAuthorizationHeader(),
+    params: httpParams
+  });
+}
+
+updateUser(id: number, data: any): Observable<any> {
+  return this.http.put(BASE_URL + `api/admin/user/${id}`, data, {
+    headers: this.createAuthorizationHeader()
+  });
+}
+
 
 }
  

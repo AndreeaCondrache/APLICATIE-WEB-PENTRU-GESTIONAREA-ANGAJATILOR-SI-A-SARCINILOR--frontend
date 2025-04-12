@@ -1,0 +1,89 @@
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .page-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #2c0b4e;
+    margin-top: 0px;       // 🔽 micșorează spațiul de sus
+    
+  }
+  .edit-button {
+    color: green;
+    font-weight: 500;
+  }
+  
+  .delete-button {
+    color: red;
+    font-weight: 500;
+  }
+  
+  
+  .filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  
+    mat-form-field {
+      flex: 1;
+      min-width: 200px;
+    }
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  }
+  
+  .selected-employee-card {
+    padding: 1.5rem;
+    background-color: #f7f6fb;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(44, 11, 78, 0.1);
+  
+    h3 {
+      color: #2c0b4e;
+      margin-bottom: 1rem;
+    }
+  
+    .stats {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+  
+      .stat {
+        flex: 1;
+        min-width: 150px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        text-align: center;
+  
+        h4 {
+          margin: 0;
+          font-size: 18px;
+          color: #555;
+        }
+  
+        p {
+          margin: 0.5rem 0 0;
+          font-weight: bold;
+          font-size: 20px;
+          color: #2c0b4e;
+        }
+      }
+    }  }
+  

@@ -1,0 +1,54 @@
+.dialog-container {
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+
+  .dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e0e57;
+    margin-bottom: 16px;
+  }
+
+  .dialog-message {
+    font-size: 18px;
+    margin-bottom: 32px;
+    color: #333;
+    word-wrap: break-word;
+  }
+
+  .dialog-actions {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+
+    button {
+      font-weight: bold;
+      font-size: 16px;
+      padding: 8px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .cancel-button {
+      color: green;
+
+      &:hover {
+        background-color: rgba(0, 128, 0, 0.1);
+      }
+    }
+
+    .delete-button {
+      color: red;
+
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.1);
+      }
+    }
+  }
+}

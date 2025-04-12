@@ -9,6 +9,9 @@ const BASE_URL = 'http://localhost:8080/';
   providedIn: 'root'
 })
 export class EmployeeService {
+  uploadProfilePicture(formData: FormData) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -52,4 +55,14 @@ export class EmployeeService {
       'Authorization', 'Bearer ' + StorageService.getToken()
     );
   }
+  
+  testToken(): void {
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + StorageService.getToken());
+  
+    this.http.get('http://localhost:8080/api/auth/test', { headers }).subscribe({
+      next: (res) => console.log('✅ Token valid. Răspuns:', res),
+      error: (err) => console.error('❌ Token invalid sau lipsă. Eroare:', err)
+    });
+  }
+  
 }

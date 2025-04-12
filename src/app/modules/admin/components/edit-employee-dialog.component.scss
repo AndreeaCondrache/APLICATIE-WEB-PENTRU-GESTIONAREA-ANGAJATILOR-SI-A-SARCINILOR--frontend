@@ -1,0 +1,29 @@
+.dialog-container {
+    padding: 32px;
+    max-width: 1000px;
+  }
+  
+  .dialog-title {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 câmpuri pe un rând
+    column-gap: 16px;
+    row-gap: 24px;
+  }
+  
+  .field {
+    width: 100%;
+  }
+  
+  .actions {
+    margin-top: 25x;
+    display: flex;
+    justify-content: space-between;
+  }
+  

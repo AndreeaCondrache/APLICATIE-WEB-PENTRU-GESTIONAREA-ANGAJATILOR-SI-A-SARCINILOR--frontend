@@ -7,13 +7,13 @@ import { EmployeeService } from '../../services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-view-task-details',
+  selector: 'app-view-task-details-employee',
   standalone: true,
   imports: [SharedModule,RouterModule],
-  templateUrl: './view-task-details.component.html',
-  styleUrl: './view-task-details.component.scss'
+  templateUrl: './view-task-details-employee.component.html',
+  styleUrl: './view-task-details-employee.component.scss'
 })
-export class ViewTaskDetailsComponent {
+export class ViewTaskDetailsEmployeeComponent {
 
    id:number = this.activatedRoute.snapshot.params['id'];
   commentForm!: FormGroup;

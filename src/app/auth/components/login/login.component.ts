@@ -55,7 +55,8 @@ togglePasswordVisibility(){
         // Salvează informațiile utilizatorului în Storage
         const user = {
           id: res.userId,
-          role: res.userRole
+          role: res.userRole,
+          name: res.userName // ← Asigură-te că backendul trimite și numele!
         };
         StorageService.saveUser(user);
         StorageService.saveToken(res.jwt);

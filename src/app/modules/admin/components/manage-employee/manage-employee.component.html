@@ -1,0 +1,74 @@
+<div class="container">
+    <h2 class="page-title">Manage Employees</h2>
+  
+    <div class="filters">
+      <mat-form-field appearance="outline">
+        <mat-label>Search by Name</mat-label>
+        <input matInput placeholder="Enter name..." [(ngModel)]="searchName" (ngModelChange)="applyFilters()">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Filter by Department</mat-label>
+        <mat-select [(ngModel)]="selectedDepartment" (selectionChange)="applyFilters()">
+          <mat-option value="">All</mat-option>
+        <!--  <mat-option value="NONE">None</mat-option>  fără departament -->
+          <mat-option *ngFor="let dept of departments" [value]="dept">{{ dept }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <div class="table-container">
+      <table mat-table [dataSource]="filteredEmployees" class="mat-elevation-z8">
+  
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let employee">{{ employee.name }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let employee">{{ employee.email }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="department">
+          <th mat-header-cell *matHeaderCellDef>Department</th>
+          <td mat-cell *matCellDef="let employee">{{ employee.department }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let employee">
+            <button mat-button color="primary" (click)="selectEmployee(employee)">Details</button>
+            <button mat-button class="edit-button" (click)="editEmployee(employee)">Edit</button>
+            <button mat-button class="delete-button" (click)="deleteEmployee(employee.id, employee.name)">Delete</button>
+
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+      </table>
+    </div>
+  
+    <div *ngIf="selectedEmployee" class="selected-employee-card">
+      <h3>{{ selectedEmployee.name }}</h3>
+      <p><strong>Email:</strong> {{ selectedEmployee.email }}</p>
+      <p><strong>Department:</strong> {{ selectedEmployee.department }}</p>
+  
+      <div class="stats">
+        <div class="stat">
+          <h4>Total Tasks</h4>
+          <p>{{ selectedEmployeeStats.total }}</p>
+        </div>
+        <div class="stat">
+          <h4>In Progress</h4>
+          <p>{{ selectedEmployeeStats.inProgress }}</p>
+        </div>
+        <div class="stat">
+          <h4>Completed</h4>
+          <p>{{ selectedEmployeeStats.completed }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

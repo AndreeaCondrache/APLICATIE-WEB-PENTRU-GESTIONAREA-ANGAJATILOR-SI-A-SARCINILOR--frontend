@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Add Employee</h2>
+    <form [formGroup]="employeeForm" (ngSubmit)="submitForm()" autocomplete="off">
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Full Name</mat-label>
+        <input matInput placeholder="Enter full name" formControlName="name">
+        <mat-error *ngIf="employeeForm.get('name')?.hasError('required')">Name is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter email" formControlName="email" type="email" autocomplete="off">
+        <mat-error *ngIf="employeeForm.get('email')?.hasError('required')">Email is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Enter password" formControlName="password" type="password" autocomplete="new-password">
+        <mat-error *ngIf="employeeForm.get('password')?.hasError('required')">Password is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Department</mat-label>
+        <mat-select formControlName="department">
+          <mat-option *ngFor="let dept of departments" [value]="dept">{{ dept }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="employeeForm.get('department')?.hasError('required')">Department is required</mat-error>
+      </mat-form-field>
+  
+      <div style="text-align: center;">
+      <button mat-raised-button type="submit" [disabled]="employeeForm.invalid">Add Employee</button>
+    </div>
+    </form>
+  </div>
+  

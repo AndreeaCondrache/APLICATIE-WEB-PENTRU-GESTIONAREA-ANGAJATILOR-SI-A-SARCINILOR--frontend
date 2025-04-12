@@ -21,8 +21,9 @@
   <mat-toolbar color="primary" class="navbar">
       <span class="navbar-brand">Task Tracker</span>
     <span class="spacer"></span>
-    <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Admin DashBoard</button>
-    <button mat-button routerLink="/admin/task/post" routerLinkActive="active">Post Task</button>
+   <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">DashBoard</button>
+    <button mat-button routerLink="/admin/panel" routerLinkActive="active">ADMIN PANEL</button>
+
    
     <button mat-button  routerLinkActive="active" (click)= "logout()">Logout</button>
   </mat-toolbar>
@@ -32,7 +33,8 @@
   <mat-toolbar color="primary" class="navbar">
       <span class="navbar-brand">Task Tracker</span>
     <span class="spacer"></span>
-    <button mat-button routerLink="/employee/dashboard" routerLinkActive="active">Employee DashBoard</button>
+    <button mat-button routerLink="/employee/dashboard" routerLinkActive="active">DashBoard</button>
+    <button mat-button routerLink="/employee/profile" routerLinkActive="active">Profile</button> <!-- ✅ ADĂUGAT -->
     <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
   </mat-toolbar>
 </div>

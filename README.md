@@ -1,27 +1,51 @@
-# LicentaAngular
+# Aplicație Web pentru Gestionarea Angajaților și a Sarcinilor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+Această aplicație web permite gestionarea angajaților dintr-o companie, împreună cu sarcinile care le sunt atribuite. Proiectul este împărțit în două componente:
 
-## Development server
+- **Frontend**: Angular
+- **Backend**: Spring Boot
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔧 Funcționalități principale
 
-## Code scaffolding
+### 👩‍💼 Pentru Administrator:
+- Adăugare, editare și ștergere angajați
+- Atribuire de sarcini
+- Vizualizare statistici generale
+- Răspuns automatizat la întrebări prin chatbot
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 👨‍💻 Pentru Angajat:
+- Vizualizare sarcini proprii
+- Marcarea sarcinilor ca fiind finalizate
+- Vizualizare progres personal
 
-## Build
+## 🧱 Tehnologii utilizate
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Frontend
+- Angular 16+
+- TypeScript
+- HTML, SCSS
+- Angular Material (interfață)
 
-## Running unit tests
+### Backend
+- Spring Boot
+- Java
+- Spring Security (autentificare)
+- MySQL (bază de date)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🧪 Autentificare
+Aplicația include un mecanism de login:
+- Autentificare JWT pentru sesiuni sigure
+- Roluri: Admin și Angajat
+- Protejarea resurselor în funcție de rol
 
-## Running end-to-end tests
+## 🔌 Conectare între frontend și backend
+- Comunicarea se face prin API REST (HTTP)
+- Frontend-ul trimite cereri către backend prin `HttpClient`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🧠 Chatbot
+- Implementat în backend
+- Răspunde la întrebări despre starea angajaților sau sarcini
+- Util pentru administrator în zona de dashboard
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
